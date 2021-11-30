@@ -8,24 +8,44 @@ namespace OOPS2PM
 {
     class Customer : ICustomer
     {
-        public void Create()
+        private List<CustomerModel> customers;
+        public Customer()
         {
-            throw new NotImplementedException();
+            customers = new List<CustomerModel>()
+            {
+                new CustomerModel(){Id=1,Name="deepak",Gender="male"},
+                new CustomerModel(){Id=2,Name="amit",Gender="male"},
+                new CustomerModel(){Id=3,Name="sumitra",Gender="female"},
+            };
+            
         }
 
-        public void Delete()
+        public void Create(CustomerModel model)
         {
-            throw new NotImplementedException();
+            customers.Add(model);
         }
 
-        public bool Login()
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var cust = customers.SingleOrDefault(e => e.Id == id);
+            if (cust!=null)
+            {
+                customers.Remove(cust);
+            }
+            else
+            {
+                Console.WriteLine("Customer with ID {0} not found",id);
+            }
         }
 
-        public void Update()
+        public List<CustomerModel> GetCustomers()
         {
-            throw new NotImplementedException();
+            return customers.ToList();
+        }
+
+        public void Update(CustomerModel model)
+        {
+           // customers.re
         }
     }
 }

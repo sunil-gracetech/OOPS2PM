@@ -155,13 +155,101 @@ namespace OOPS2PM
             }
             */
 
-            List<string> list = new List<string>();
-            list.Add("php");
+            //List<string> list = new List<string>();
+            //list.Add("php");
 
-            List<int> list2 = new List<int>();
-            list2.Add(100);
+            //List<int> list2 = new List<int>();
+            //list2.Add(100);
 
-            
+            /*
+            Customer cc = new Customer();
+            //print all customers
+            var custs = cc.GetCustomers();
+            foreach(var c in custs)
+            {
+                Console.WriteLine($"Customer ID : {c.Id}, Name {c.Name}, Gender: {c.Gender}");
+                Console.WriteLine("---------------------------------------------");
+            }
+            */
+            /*
+            //add new customer
+            string ask = "";
+            do
+            {
+                Console.WriteLine("Enter Name ?");
+                string name = Console.ReadLine();
+                Console.WriteLine("Enter Gender ?");
+                string gender = Console.ReadLine();
+                var id = cc.GetCustomers().Count + 1;
+                CustomerModel model = new CustomerModel() { Id = id, Name = name, Gender = gender };
+                cc.Create(model);
+                Console.WriteLine("Do you want add new customer press Y/N ?");
+                ask = Console.ReadLine();
+            }
+            while (ask == "y");
+
+            //print all customer
+            Console.WriteLine("------------All customer records------------");
+            var custs2 = cc.GetCustomers();
+            foreach (var c in custs2)
+            {
+                Console.WriteLine($"Customer ID : {c.Id}, Name {c.Name}, Gender: {c.Gender}");
+                Console.WriteLine("---------------------------------------------");
+            }
+
+            */
+
+            //remove customer;
+            /*
+            Console.WriteLine("Enter Customer Id ?");
+            int id = int.Parse(Console.ReadLine());
+            cc.Delete(id);
+            Console.WriteLine("----------------After delete-------------");
+            var custs2 = cc.GetCustomers();
+            foreach (var c in custs2)
+            {
+                Console.WriteLine($"Customer ID : {c.Id}, Name {c.Name}, Gender: {c.Gender}");
+                Console.WriteLine("---------------------------------------------");
+            }
+            */
+
+            /*
+            Stack<string> st = new Stack<string>();
+            st.Push("php");
+            st.Push("asp");
+            st.Push("python");
+            st.Push("java");
+
+            st.Pop();
+            foreach(var e in st)
+            {
+                Console.WriteLine("Item: "+e);
+            }
+
+            */
+
+            Queue<string> qqq = new Queue<string>();
+            qqq.Enqueue("asp");
+            qqq.Enqueue("java");
+            qqq.Enqueue("jsp");
+
+            qqq.Dequeue();
+            foreach (var e in qqq)
+            {
+                Console.WriteLine("Item: " + e);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

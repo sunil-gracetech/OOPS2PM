@@ -8,10 +8,10 @@ namespace OOPS2PM
 {
    public interface ICustomer
     {
-        bool Login();
-        void Create();
-        void Update();
-        void Delete();
+        List<CustomerModel> GetCustomers();
+        void Create(CustomerModel model);
+        void Update(CustomerModel model);
+        void Delete(int id);
 
     }
 }
