@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankingCustomer.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="ICustomer.cs" />
     <Compile Include="inheritance\BaseEmployee.cs" />
     <Compile Include="inheritance\FulltimeEmployee.cs" />
     <Compile Include="inheritance\ParttimeEmployee.cs" />
